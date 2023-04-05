@@ -1,0 +1,14 @@
+# Pulumi deploying S3 in AWS
+
+name: S3
+runtime: yaml
+description: A Pulumi YAML program to deploy a S3 Buckey in AWS
+config:
+  aws:region: us-west-2
+
+resources:
+  - type: aws:s3/bucket:Bucket
+    name: reposaur-bkt
+    properties:
+      bucket: reposaur-bkt
+      region: us-west-2
